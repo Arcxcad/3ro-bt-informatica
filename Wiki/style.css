@@ -1,0 +1,151 @@
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 20px;
+  margin: 30px auto;             
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
+  border: 1px solid #e50914;        
+}
+
+form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #222;
+  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: #2a2a2a;
+  box-shadow: 0 0 5px #e50914;   
+  outline: none;
+}
+
+/* Botón */
+form button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: darkred;
+  transform: scale(1.05);        
+}
+
+body {
+  background-color: #111;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2 {
+ color: red;
+ text-align: center;
+ margin-top: 0;
+ padding-top: 0;
+}
+
+/* Navegación */
+nav {
+  background-color: #111;   
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;            
+  margin: 0;
+  padding: 0;
+  display: flex;               
+  justify-content: center;     
+  gap: 20px;                   
+}
+
+nav ul li a {
+  text-decoration: none;       
+  color: aqua;                 
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+  background-color: purple;   
+  transform: scale(1.05);      
+}
+
+main section {
+  padding: 30px;
+  border-bottom: 1px solid black;
+}
+
+li {
+  border: 3px dashed blue;   
+  border-radius: 8px;         
+  padding: 15px;             
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 350px;
+  border: 3px solid #e50914;
+  border-radius: 8px;
+}
+
+.img1 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  padding: 5px;
+  border: 2px solid red;
+  border-radius:5%;
+  margin-right: 20px;
+  margin-left: 55px;
+}
+
+.img2 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  padding: 5px;
+  border: 2px solid red;
+  border-radius:5%;
+  margin-right: 20px;
+}
+
+.img3 {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  padding: 5px;
+  border: 2px solid red;
+  border-radius:5%;
+}
