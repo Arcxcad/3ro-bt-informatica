@@ -3,31 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos</title>
   <link rel="stylesheet" href="style.css">
-  <title>Fotos</title> 
 </head>
 <body>
-    <header>
-        <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-        </ul>
-        </nav>
-        <h1>Fotos</h1>
-    </header>
-    
-    <main>
-    
-        <div class="container">
-        <h2>Galería de fotos</h2>
-        <div class="galeria">
-        <img src="/Wiki/images/Foto.png" alt="Foto 1">
-        <img src="/Wiki/images/minecraft.avif" alt="Foto 2">
-        <img src="/Wiki/images/re4.jpg" alt="Foto 3">
-        <img src="/Wiki/images/stalker2.jpg" alt="Foto 4">
-        </div>
-        </div>
-    
-    </main>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav>
+    <h1>Fotos</h1>
+  </header>
+
+  <h2>Galería de fotos</h2>
+<div class="gallery">
+  <img src="/Wiki/images/Foto.png" alt="Foto de mi" class="gallery-item" onclick="openModal(this)">
+  <img src="/Wiki/images/minecraft.avif" alt="Minecraft" class="gallery-item" onclick="openModal(this)">
+  <img src="/Wiki/images/re4.jpg" alt="Resident evil 4 Remake" class="gallery-item" onclick="openModal(this)">
+  <img src="/Wiki/images/stalker2.jpg" alt="Stalker 2" class="gallery-item" onclick="openModal(this)">
+</div>
+
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img id="modal-img" class="modal-content">
+  <div id="modal-caption" class="caption"></div>
+</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
