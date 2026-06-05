@@ -2,7 +2,7 @@
 # Script para desplegar una aplicación web en una VM
 
 #1 clonar el repositorio 
-REPO_URL="https://github.com/ejemplo/app-web.git"
+REPO_URL="https://github.com/Arcxcad/3ro-bt-informatica.git"
 REPO_DIR="WIKI"
 
 if [ ! -d "$REPO_DIR" ]; then
@@ -42,4 +42,4 @@ sudo systemctl start apache2
 echo "Verificando el estado del servicio Apache..."
 sudo systemctl status apache2 | grep Active
 
-echo "Despliegue completado. La aplicación web debería estar disponible en http://localhost"
+echo "Completado. La aplicación web debería estar disponible en http://localhost"
