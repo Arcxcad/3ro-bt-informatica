@@ -1,3 +1,4 @@
+// Cerrar modal al hacer clic en el botón de cerrar "X"
 function openModal(imgElement) {
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modal-img");
