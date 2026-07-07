@@ -1,45 +1,52 @@
 #!/bin/bash
-# Script para desplegar una aplicación web en una VM
+# Script para desplegar una aplicación web en Apache dentro de una VM
 
-#1 clonar el repositorio 
+# 1. Configuración de variables
 REPO_URL="https://github.com/Arcxcad/3ro-bt-informatica.git"
-REPO_DIR="WIKI"
+REPO_DIR="3ro-bt-informatica/Wiki"
+APACHE_DIR="/var/www/html"
 
+# 2. Clonar el repositorio si no existe, o actualizarlo si ya está presente
 if [ ! -d "$REPO_DIR" ]; then
-    echo "Clonando el repositorio en $REPO_DIR..."
+    echo "Clonando repositorio..."
     git clone "$REPO_URL"
 else
-    echo "El repositorio ya existe en $REPO_DIR. Actualizando..."
+    echo "Repositorio ya existe, actualizando..."
+    cd "3ro-bt-informatica" || exit 1
     git pull origin main
 fi
 
-#2 Detener apache
-echo "Deteniendo el servicio Apache..."
+# 3. Detener el servicio Apache
+echo "Deteniendo Apache..."
 sudo systemctl stop apache2
 
-#3 Ingresando al repositorio
-cd "$REPO_DIR" || { echo "No se pudo ingresar al directorio $REPO_DIR"; exit 1; }
+# 4. Entrar a la carpeta Wiki dentro del repositorio
+cd "$REPO_DIR" || { echo "No se pudo entrar a $REPO_DIR"; exit 1; }
 
-#4 Actualizar el contenido
-echo "Actualizando el contenido con git pull..."
+# 5. Actualizar contenido con git pull
+echo "Actualizando contenido..."
 git pull
 
-#5 Cambiar a la rama develop
+# 6. Cambiar a la rama develop (si existe) o crearla si no está
 echo "Cambiando a la rama develop..."
-git checkout develop
+if git show-ref --verify --quiet refs/heads/develop; then
+    git checkout develop
+else
+    echo "La rama develop no existe, creando..."
+    git checkout -b develop
+fi
 
-#6 Copiar archivos a la carpeta de apache
-echo "Copiando archivos a la carpeta de Apache /var/www/html..."
-APACHE_DIR="/var/www/html"
+# 7. Copiar archivos de la carpeta Wiki al directorio de Apache
 echo "Copiando archivos a $APACHE_DIR..."
 sudo cp -r * "$APACHE_DIR"
 
-#7 Iniciar apache
-echo "Iniciando el servicio Apache..."
+# 8. Iniciar nuevamente el servicio Apache
+echo "Iniciando Apache..."
 sudo systemctl start apache2
 
-#8 Verificar el estado del servicio
-echo "Verificando el estado del servicio Apache..."
+# 9. Verificar estado de Apache
+echo "Estado de Apache:"
 sudo systemctl status apache2 | grep Active
 
-echo "Completado. La aplicación web debería estar disponible en http://localhost"
+echo "=== Despliegue completado ==="
+echo "Tu página web está disponible en http://localhost (o con curl http://localhost en Ubuntu Server)"
