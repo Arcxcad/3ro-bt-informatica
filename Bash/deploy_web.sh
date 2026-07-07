@@ -48,5 +48,4 @@ sudo systemctl start apache2
 echo "Estado de Apache:"
 sudo systemctl status apache2 | grep Active
 
-echo "=== Despliegue completado ==="
-echo "Tu página web está disponible en http://localhost (o con curl http://localhost en Ubuntu Server)"
+echo "Completado. La página web está disponible en http://localhost (o con curl http://localhost, para ver su contenido)"
