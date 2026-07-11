@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 1</title>
+  <style>
+/* Pseudoclases y pseudoelementos */
+
+    /* Ejercicio 1 */
+    /*button:hover {
+      background-color: orange;
+      color: white;
+    }*/
+
+    /* Ejercicio 2 */
+    /*input[type="text"]:focus {
+      border: 2px solid red;
+      background-color: white;
+    }*/
+
+    /* Ejercicio 3 */
+    /*ul li:first-child {
+      color: red;
+      font-weight: bold;
+    }*/
+
+    /* Ejercicio 4 */
+    /*tr:nth-child(odd) {
+      background-color: lightgray;
+    }*/
+
+    /* Ejercicio 5 */
+    /*p:last-of-type {
+      display: none;
+    }*/
+
+    /* Pseudoelementos */
+    /*h2::before {
+      content: "*"; 
+      color: orange; 
+    }
+
+    p::first-letter {
+      color: red;
+    }*/
+
+    p {
+      color: black;
+    }
+
+    p:hover {
+      color: blue;
+    }
+
+    /*button::after {
+      content: " ✔ Enviado";
+      color: green;
+    }*/
+
+    /* p::selection {
+      background-color: yellow;
+      color: blue;
+    }
+
+    p::first-line {
+      color: red;
+    }*/
+
+    button {
+      background-color: lightgray;
+      cursor: pointer;
+    }
+
+    button:active {
+      background-color: blue;
+      color: white;
+    }
+
+    /*.caja {
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      animation: cambioColor 1s infinite alternate;
+    }
+
+    @keyframes cambioColor {
+      from {
+        background-color: red;
+      }
+      to {
+        background-color: white;
+      }
+    }*/
+
+    .caja {
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      margin: 50px auto;
+      animation: girarX 2s linear infinite;
+    }
+
+    @keyframes girarX {
+      from {
+        transform: rotateX(0deg);
+      }
+      to {
+        transform: rotateX(360deg);
+      }
+    }
+
+    p {
+      transition: transform 0.3s ease;
+    }
+
+    p:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <button>Haz clic</button>
+  <input type="text" placeholder="Escribe algo...">
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+  </ul>
+  <table border="1">
+    <tr><td>Fila 1</td></tr>
+    <tr><td>Fila 2</td></tr>
+    <tr><td>Fila 3</td></tr>
+    <tr><td>Fila 4</td></tr>
+  </table>
+  <p>Primer párrafo</p>
+  <p>Segundo párrafo</p>
+  <p>Tercer párrafo</p>
+
+  <div class="caja"></div>
+  
+  <h2>Notificaciones</h2>
+   <p>Lorem ipsum dolor sit amet...</p>
+   <button>Enviar</button>
+   <p>Selecciona este texto con el mouse.</p>
+    <p>Esta es la primera línea. Luego continúa un texto más largo que ocupará varias líneas para que se note el efecto.</p>
+</body>
+</html>

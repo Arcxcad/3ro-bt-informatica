@@ -1,0 +1,12 @@
+// Codigo para crear un txt, elegir, editar, guardar, eliminar contenido, etc.
+import java.io.*;
+import java.util.Scanner;
+
+class Lista {
+
+    public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+        
+       
+    }
+}
