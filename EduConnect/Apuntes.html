@@ -11,7 +11,7 @@
     <nav class="menu">
         <a href="index.html">Inicio</a>
         <a href="Recursos.html">Recursos Educativos</a>
-        <a href="Calendarios.html">Calendarios</a>
+        <a href="Calendario.html">Calendarios</a>
         <a href="Apuntes.html">Apuntes</a>
         <a href="Proyectos.html">Proyectos</a>
     </nav>
@@ -21,6 +21,17 @@
         <p>Bienvenido a la sección de Apuntes de EduConnect, donde podrás encontrar los apuntes para tus asignaturas</p>
         <p>Aquí encontrarás la posibilidad de crear y compartir apuntes con otros estudiantes.</p>
     </header>
-    
+
+        <div class="apunte publico" id="publicos">
+            <p>Este es un apunte público.</p>
+            <button onclick="crearApunte('Apunte público', 'publicos')">Crear público</button>
+        </div>
+
+        <div class="apunte privado" id="privados">
+            <p>Este es un apunte privado (solo visible si el usuario tiene permiso).</p>
+            <button onclick="crearApunte('Apunte privado', 'privados')">Crear privado</button>
+        </div>
+
+    <script src="apuntes.js"></script>
 </body>
 </html>
