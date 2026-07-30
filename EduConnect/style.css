@@ -53,3 +53,31 @@ text-align: center;
   padding: 5px;
   border: 1px dashed gray;
 }
+
+.materiales {
+  background-color: red;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.material {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid navy;
+  background-color: white;
+}
+
+.proyectos {
+  background-color: red;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.proyecto {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid navy;
+  background-color: white;
+}
